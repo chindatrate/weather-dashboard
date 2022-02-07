@@ -1,0 +1,21 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+}
+
+.navbar {
+    height: 150px !important;
+}
+
+#searchResults {
+    height: 100vh;
+}
+
+#weatherContent {
+    display: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
