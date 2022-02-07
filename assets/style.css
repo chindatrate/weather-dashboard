@@ -1,21 +1,29 @@
-h1 {
-    font-family: 'Roboto', sans-serif;
-    color: aliceblue;
+.search-column{
+    background-color: lightsteelblue;
 }
 
-.navbar {
-    height: 150px !important;
+.list-group-items{
+    line-height: 0.5;
+    border: none;
 }
 
-#searchResults {
-    height: 100vh;
+.card-body{
+    flex: auto;
 }
 
-#weatherContent {
-    display: none;
+span.severe{
+    padding: 3px;
+    background-color: red;
+    color: white;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
+span.moderate{
+    padding: 3px;
+    background-color: yellow;
+}
 
+span.favorable{
+    padding: 3px;
+    background-color: green;
+    color: white;
 }
