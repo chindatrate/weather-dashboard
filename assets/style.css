@@ -2,10 +2,9 @@
     background-color: lightsteelblue;
 }
 
-.list-group-items{
-    line-height: 0.5;
-    border: none;
-}
+.list-group-item {
+    border: 0px;
+ }
 
 .card-body{
     flex: auto;

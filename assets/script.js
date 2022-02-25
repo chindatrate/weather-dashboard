@@ -69,7 +69,7 @@ var displayWeather = function (weather, searchCity) {
 
     //wind speed
     var windSpeedEl = document.createElement("span");
-    windSpeedEl.textContent = "Wind Speed: " + weather.main.speed + " MPH";
+    windSpeedEl.textContent = "Wind Speed: " + weather.wind.speed + " MPH";
     windSpeedEl.classList = "list-group-item"
 
     weatherContainerEl.appendChild(temperatureEl);
@@ -141,33 +141,40 @@ var display5Day = function (weather) {
 
         var forecastEl = document.createElement("div");
         forecastEl.classList = "card bg-primary text-light m-2";
+
+        // date element
         var forecastDate = document.createElement("h5")
         forecastDate.textContent = moment.unix(dailyForecast.dt).format("MMM D, YYYY");
         forecastDate.classList = "card-header text-center"
         forecastEl.appendChild(forecastDate);
 
+        // image element
         var weatherIcon = document.createElement("img")
         weatherIcon.classList = "card-body text-center";
         weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${dailyForecast.weather[0].icon}@2x.png`);
 
         forecastEl.appendChild(weatherIcon);
 
+        // temperature span
         var forecastTempEl = document.createElement("span");
         forecastTempEl.classList = "card-body text-center";
         forecastTempEl.textContent = dailyForecast.main.temp + " °F";
 
         forecastEl.appendChild(forecastTempEl);
 
+        // humidity span
         var forecastHumEl = document.createElement("span");
         forecastHumEl.classList = "card-body text-center";
         forecastHumEl.textContent = dailyForecast.main.humidity + " %";
 
         forecastEl.appendChild(forecastHumEl);
 
+        //append to 5 day container
         forecastContainerEl.appendChild(forecastEl);
     }
 }
 
+//past search
 var pastSearch = function (pastSearch) {
     pastSearchEl = document.createElement("button");
     pastSearchEl.textContent = pastSearch;
